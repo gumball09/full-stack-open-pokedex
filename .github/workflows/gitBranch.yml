@@ -20,3 +20,6 @@ jobs:
 
       - name: List directories
         run: ls -a
+
+      - name: Print date
+        run: date
