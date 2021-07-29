@@ -8,4 +8,4 @@ jobs:
   deployment_linting:
   runs-on: ubuntu-18.04
   name: 'Linting'
-  run: eslint './**/*.{js,jsx}
+  run: eslint '../**/*.{js,jsx}
