@@ -39,6 +39,7 @@ jobs:
         ### set up cypress to run e2e testing
         uses: cypress-io/github-action@v2
         with:
+          ### specify how to run cypress test
           command: npm run test:e2e
           ### start the application before running the cmd
           start: npm run start-prod
