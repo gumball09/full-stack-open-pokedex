@@ -17,3 +17,6 @@ jobs:
       - name: Test PR on branch
         run: |
           echo "Pull request"
+
+      - name: List directories
+        run: ls ../test
