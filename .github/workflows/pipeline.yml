@@ -6,8 +6,21 @@ on:
       - master
 
 jobs:
-  simple_deployment_pipeline:
+  deployment_pipeline:
     runs-on: ubuntu-18.04
     steps:
+      ### check out the code from repo because virtual env does not have any code
+      - uses: actions/checkout@v2
+
+      ### set up node.js to utilize cmd specified in package.json
+      - uses: actions/setup-node@v1
+        ### 'with' is a parameter of action
+        with:
+          node-version: '12.x'
+
+      ### install the dependencies above
+      - name: npm install
+        run: npm install
+
       - name: lint
         run: npm run eslint
