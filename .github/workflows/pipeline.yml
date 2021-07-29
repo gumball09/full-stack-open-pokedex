@@ -54,7 +54,7 @@ jobs:
           wait-on: http://localhost:5000
 
       ### CONDITIONAL ACTION
-      if: ${{github.event_name == 'push'}}
+      if: ${{ github.event_name == 'push' }}
       ### cmd to push code to heroku
       - name: pushing to heroku
         ### set up heroku for deployment
