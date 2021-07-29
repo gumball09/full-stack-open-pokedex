@@ -34,7 +34,7 @@ const PokemonPage = ({ previous, next }) => {
     (ability) => ability.is_hidden === true
   )
 
-  //console.log('hiddenAbility=', hiddenAbility)
+  console.log('hiddenAbility=', hiddenAbility)
   return (
     <>
       <div className="links">

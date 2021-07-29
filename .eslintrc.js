@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true,
     'jest/globals': true,
-    node: true,
+    node: true, // get rid of no-process-env
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
