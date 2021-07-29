@@ -22,5 +22,14 @@ jobs:
       - name: npm install
         run: npm install
 
+      ### cmd to run eslint
       - name: lint
         run: npm run eslint
+
+      ### cmd to run build
+      - name: build
+        run: npm run build
+
+      ### cmd to run test
+      - name: test
+        run: npm run test
