@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: 'Linting'
-        run: eslint ../**/*.{js,jsx}
+        run: npm run lint
