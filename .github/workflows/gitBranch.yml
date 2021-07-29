@@ -6,9 +6,11 @@ on:
       - master
   ### make it impossible to push code directly to main/ master
   ### at the same time, run the workflow for all other possible direct pushes to main/ master
+
   ### pull_request:
   ### branches: [master]
   ### types: [opened, synchronize]
+
 
 jobs:
   test_pull_request_on_gitbranch:
@@ -17,10 +19,3 @@ jobs:
       - name: Test PR on branch
         run: |
           echo "Pull request"
-
-      - name: List directories in test
-        run: ls ../test
-
-      - name: Calculate
-        run: |
-          echo 2+3

@@ -53,6 +53,8 @@ jobs:
           ### specify to wait for the server to be on this url before the test
           wait-on: http://localhost:5000
 
+      ### CONDITIONAL ACTION
+      if: ${{ github.event_name == 'push' }}
       ### cmd to push code to heroku
       - name: pushing to heroku
         ### set up heroku for deployment
