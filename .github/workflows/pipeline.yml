@@ -45,3 +45,13 @@ jobs:
           start: npm run start-prod
           ### specify to wait for the server to be on this url before the test
           wait-on: http://localhost:5000
+
+      ### cmd to push code to heroku
+      - name: pushing to heroku
+        ### set up heroku for deployment
+        uses: akhileshns/heroku-deploy@v3.12.12
+        ### specify parameters
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'my-pokedex-pokemon'
+          heroku_email: 'vani.dniess.baby@gmail.com'
