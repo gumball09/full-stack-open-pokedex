@@ -6,7 +6,7 @@ on:
 
 jobs:
   deployment_linting:
-  runs-on: ubuntu-18.04
-  steps:
-    - name: 'Linting'
-      run: eslint '../**/*.{js,jsx}
+    runs-on: ubuntu-18.04
+    steps:
+      - name: 'Linting'
+        run: eslint '../**/*.{js,jsx}
