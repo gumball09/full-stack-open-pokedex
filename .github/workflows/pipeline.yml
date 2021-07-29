@@ -68,3 +68,14 @@ jobs:
           ### check if the value returned by sending a GET request to the healthcheck url is equal to the checkstring
           checkstring: 'ok'
           rollbackonhealthcheckfailed: true
+
+      ### cmd to bump version and push tag
+      - uses: actions/checkout@v2
+
+      - name: bump version and push tag
+        uses: anothrNick/github-tag-action@1.33.0
+        ### CONDITIONAL ACTION: only runs when changes are merged into main branch
+        if: ${{ github.event_name == 'push' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch
