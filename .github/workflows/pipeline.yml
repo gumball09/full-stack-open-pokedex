@@ -5,7 +5,7 @@ on:
     branches: -master
 
 jobs:
-  deployment_linting
+  deployment_linting:
   runs-on: ubuntu-18.04
   name: 'Linting'
   run: eslint './**/*.{js,jsx}
