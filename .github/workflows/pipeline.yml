@@ -2,11 +2,12 @@ name: Deployment pipeline
 
 on:
   push:
-    branches: -master
+    branches:
+      - master
 
 jobs:
   deployment_linting:
     runs-on: ubuntu-18.04
     steps:
       - name: 'Linting'
-        run: eslint '../**/*.{js,jsx}
+        run: eslint ../**/*.{js,jsx}
