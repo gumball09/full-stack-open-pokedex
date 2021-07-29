@@ -5,6 +5,12 @@ on:
     branches:
       - master
 
+  ### make it impossible to push code directly to main/ master
+  ### at the same time, run the workflow for all other possible direct pushes to main/ master
+  pull_request:
+    branches: [master]
+    types: [opened, synchronize]
+
 jobs:
   deployment_pipeline:
     runs-on: ubuntu-18.04
