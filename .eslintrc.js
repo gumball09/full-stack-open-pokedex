@@ -23,7 +23,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'arrow-spacing': ['error', { before: true, after: true }],
     'no-console': ['error', { allow: ['warn', 'error'] }],
-    'no-process-env': 'error',
+    'no-process-env': 'always',
     'react/prop-types': 0,
   },
 }
