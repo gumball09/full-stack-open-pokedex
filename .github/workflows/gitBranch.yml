@@ -19,4 +19,4 @@ jobs:
           echo "Pull request"
 
       - name: List directories
-        run: ls ../test
+        run: ls -a
