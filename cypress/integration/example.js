@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Pokedex app', function () {
   it('Front app can be opened', function () {
     cy.visit('http://localhost:5000')
