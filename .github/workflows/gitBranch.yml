@@ -6,10 +6,9 @@ on:
       - master
 
 jobs:
-  test_pull_request_on_gitbranch
-  runs-on: ubuntu-18.04
-  steps:
-    name: Test PR on branch
-    run: |
-      echo "Pull request"
-
+  test_pull_request_on_gitbranch:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Test PR on branch
+        run: |
+          echo "Pull request"
