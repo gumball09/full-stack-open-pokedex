@@ -8,5 +8,4 @@ jobs:
   hello_world_job:
     steps:
       -name: Say hello
-      run: |
-        echo "Hello World!"
+      run: echo "Hello World!"
