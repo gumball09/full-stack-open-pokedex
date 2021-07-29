@@ -23,3 +23,6 @@ jobs:
 
       - name: Print date
         run: date
+
+      - name: Text
+        run: echo "My name is Gumball"
