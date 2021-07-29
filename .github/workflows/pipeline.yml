@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '12.x'
 
+      ### set up cypress to run e2e testing
+      - uses: cypress-io/github-action
+
       ### install the dependencies above
       - name: npm install
         run: npm install
@@ -33,3 +36,7 @@ jobs:
       ### cmd to run test
       - name: test
         run: npm run test
+
+      ### cmd to run e2e testing
+      - name: test:e2e
+        run: npm run cypress:open
