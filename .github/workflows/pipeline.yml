@@ -53,12 +53,12 @@ jobs:
           ### specify to wait for the server to be on this url before the test
           wait-on: http://localhost:5000
 
-      ### CONDITIONAL ACTION
-      if: ${{ github.event_name == 'push' }}
       ### cmd to push code to heroku
       - name: pushing to heroku
         ### set up heroku for deployment
         uses: akhileshns/heroku-deploy@v3.12.12
+        ### CONDITIONAL ACTION: only runs when changes are merged to main branch
+        if: ${{ github.event_name == 'push' }}
         ### specify parameters
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
