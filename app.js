@@ -9,11 +9,11 @@ app.use(express.static('dist'))
 // MAKE THE SURE THE APPLICATION IS UP AND RUNNING AFTER DEPLOYMENT
 // Health check
 app.get('/health', (_, res) => {
-  res.send('ok')
+  res.send('<h1>Health is ok!</h1>')
 })
 
 app.get('/version', (req, res) => {
-  res.send('v5')
+  res.send('<h1>Version 5</h1>')
 })
 
 app.listen(PORT, () => {
