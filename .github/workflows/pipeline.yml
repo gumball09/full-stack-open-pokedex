@@ -55,3 +55,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: 'my-pokedex-pokemon'
           heroku_email: 'vani.dniess.baby@gmail.com'
+          healthcheck: 'https://my-pokedex-pokemon.herokuapp.com/health'
+          ### check if the value returned by sending a GET request to the healthcheck url is equal to the checkstring
+          checkstring: 'ok'
