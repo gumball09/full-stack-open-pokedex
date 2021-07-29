@@ -1,6 +1,7 @@
 name: Deployment pipeline
 
 on:
+  ### trigger workflow on push or pull request on master branch only
   push:
     branches:
       - master
