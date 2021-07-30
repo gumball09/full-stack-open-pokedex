@@ -1,18 +1,15 @@
 version: 2
-
-on:
-  schedule:
-    - cron: '0 0 * * *'
-
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
       interval: 'monthly'
     target-branch: 'master'
+    labels: 'npm dependencies'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
       interval: 'weekly'
     target-branch: 'master'
+    labels: 'github-actions'
