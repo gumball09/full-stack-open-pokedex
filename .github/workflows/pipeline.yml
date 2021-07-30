@@ -84,6 +84,7 @@ jobs:
 
       ### set up cmd to send notifications upon failed/ successful build
       - name: action-slack
+        ### https://github.com/marketplace/actions/action-slack
         uses: 8398a7/action-slack@v3.9.2
         with:
           ### get the current status of job
