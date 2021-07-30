@@ -94,4 +94,4 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         ### pick up events even if the job fails or is canceled
         ### this condition causes the step to always execute: https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#job-status-check-functions
-        if: always()
+        if: ${{ always() }}
