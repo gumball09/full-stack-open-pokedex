@@ -74,7 +74,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: bump version and push tag
-        uses: anothrNick/github-tag-action@1.33.0
+        ### use of hash to specify version (instead of numbers) because code of that hash version does not change
+        uses: anothrNick/github-tag-action@eca2b69f9e2c24be7decccd0f15fdb1ea5906598
         ### CONDITIONAL ACTION: only runs when changes are merged into main branch
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message, ' '), '#skip') }}
         env:
