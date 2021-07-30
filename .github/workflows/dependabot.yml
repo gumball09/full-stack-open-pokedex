@@ -3,13 +3,13 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'monthly'
+      interval: 'daily'
     target-branch: 'master'
     labels: 'npm dependencies'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'daily'
     target-branch: 'master'
     labels: 'github-actions'
