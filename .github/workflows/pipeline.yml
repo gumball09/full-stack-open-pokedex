@@ -84,6 +84,7 @@ jobs:
 
       ### set up cmd to send notifications upon failed/ successful build
       - name: action-slack
+        ### https://github.com/marketplace/actions/action-slack
         uses: 8398a7/action-slack@v3.9.2
         with:
           ### get the current status of job
@@ -93,4 +94,4 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         ### pick up events even if the job fails or is canceled
         ### this condition causes the step to always execute: https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#job-status-check-functions
-        if: always()
+        if: ${{ always() }}
